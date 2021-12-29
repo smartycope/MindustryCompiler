@@ -1,0 +1,25 @@
+{
+    "name": "easymindustrycode",
+    "displayName": "EasyMindustryCode",
+    "description": "A basic functional language that compiles into Mindustry instructions",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.63.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "emc",
+            "aliases": ["EasyMindustryCode", "emc"],
+            "extensions": [".emc"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "emc",
+            "scopeName": "mindustry.code",
+            "path": "./syntaxes/emc.tmLanguage.json"
+        }]
+    }
+}
