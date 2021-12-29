@@ -3,18 +3,18 @@
 	"name": "EasyMindustryCode",
 	"patterns": [{
             "name": "keyword.control.emc",
-            "match": "\\b(if|while|else)\\b"
+            "match": "\\b(if|while|else|dowhile)\\b"
 		},
         {
 			"include": "#strings"
 		},
         {
             "name": "keyword.operator.new",
-            "match": "\\b(add|sub|mul|div|idiv|mod|pow|equal|notEqual|and|lessThan|lessThanEq|greaterThan|greaterThanEq|strictEqual|bitShiftLeft|bitShiftRight|bitor|bitand|bitxor|bitnot|max|min|angle|vectorLen|noise|abs|log|log10|sin|cos|tan|floor|ceil|sqrt|rand|operation)\\b"
+            "match": "\\b(add|sub|mul|div|idiv|mod|increment|decrement|pow|equal|notEqual|and|lessThan|lessThanEq|greaterThan|greaterThanEq|strictEqual|bitShiftLeft|bitShiftRight|bitor|bitand|bitxor|bitnot|max|min|angle|vlen|noise|abs|log|log10|sin|cos|tan|floor|ceil|sqrt|rand|operation)\\b"
         },
         {
             "name": "keyword.other.unit",
-            "match": "\\b(draw|drawClear|drawColor|drawStroke|drawLine|drawRect|drawLineRect|drawPoly|drawLinePoly|drawTriangle|drawImage|drawFlush|print|printFlush)\\b"
+            "match": "\\b(draw|drawclear|drawcolor|drawstroke|drawline|drawrect|drawlinerect|drawpoly|drawlinepoly|drawtriangle|drawimage|drawflush|print|printflush)\\b"
         },
         {
             "name": "markup.bold",
@@ -26,27 +26,23 @@
         },
         {
             "name": "variable.parameter",
-            "match": "\\b(read|write)\\b"
+            "match": "\\b(read|write|set)\\b"
         },
         {
             "name": "variable.parameter",
-            "match": "\\b(sensor|getLink)\\b"
+            "match": "\\b(sensor|getlink)\\b"
         },
         {
             "name": "comment",
             "match": "#.+"
         },
         {
-            "name": "entity.name.function",
-            "match": "\\b\\w+(?=\\()"
-        },
-        {
             "name": "entity.name.class",
-            "match": "\\b(mono|poly|mega|risso|minke|bryde|alpha|beta|gamma|flare|horizon|zenith|dagger|mace|fortress|nova|pulsar|quasar|crawler|atrax|spiroct|copper|lead|thorium|titanium|metaglass|sand|graphite|coal|scrap|silicon|plastanium|phaseFabric|surgeAlloy|sporePod|blastCompound|pyratite|water|slag|oil|cryofluid|totalItems|firstItem|totalLiquids|totalPower|itemCapacity|liquidCapacity|powerCapacity|powerNetStored|powerNetCapacity|powerNetIn|powerNetOut|ammo|ammoCapacity|health|maxHealth|heat|efficiency|timescale|rotation|x|y|shootX|shootY|size|dead|range|shooting|boosting|mineX|mineY|mining|team|type|flag|controlled|controller|name|config|payloadCount|payloadType|enabled|configure|unit|null)\\b"
+            "match": "\\b(mono|poly|mega|risso|minke|bryde|alpha|beta|gamma|flare|horizon|zenith|dagger|mace|fortress|nova|pulsar|quasar|crawler|atrax|spiroct|copper|lead|thorium|titanium|metaglass|sand|graphite|coal|scrap|silicon|plastanium|phaseFabric|surgeAlloy|sporePod|blastCompound|pyratite|water|slag|oil|cryofluid|totalItems|firstItem|totalLiquids|totalPower|itemCapacity|liquidCapacity|powerCapacity|powerNetStored|powerNetCapacity|powerNetIn|powerNetOut|ammo|ammoCapacity|health|maxHealth|heat|efficiency|timescale|rotation|x|y|shootX|shootY|size|dead|range|shooting|boosting|mineX|mineY|mining|team|type|flag|controlled|controller|name|config|payloadCount|payloadType|enabled|configure|unit|null|message|memoryCell|processor|factory|reconstructor|turret|conveyor|router)\\b"
         },
         {
             "name": "invalid.deprecated",
-            "match": "\\b(jump)\\b"
+            "match": "\\b(jump|end)\\b"
         },
         {
             "name": "emphasis",
@@ -55,6 +51,10 @@
         {
             "name": "invalid.illegal",
             "match": "This doesn't work: \\b(getlink|read|write|print|sensor|jump|ucontrol|ubind|printflush|drawflush|ulocate|uradar)(.+)(?!\\()"
+        },
+        {
+            "name": "entity.name.function",
+            "match": "\\b\\w+(?=\\()"
         }
 	],
 	"repository": {

@@ -20,17 +20,14 @@ def convertCondition(string):
     if ' ' not in string:
         return f'equal {string} true'
 
-    erParser = group(word()) + optional(whiteChunk()) + group(anyOf(*ops.keys())) + optional(whiteChunk()) + group(word())
-    # erParser.debug()
+    erParser = group(word()) + optional(whitechunk()) + group(matchMax(anyOf(*ops.keys()))) + optional(whitechunk()) + group(chunk())
     found = re.match(erParser.str(), string)
     if found:
-        # debug(found)
-        # debug(found.groups())
         op = ops[found.groups()[3]]
         a  = found.groups()[0]
         b  = found.groups()[5]
     else:
-        SyntaxError(f"Can't parse condition '{string}'")
+        raise SyntaxError(f"Can't parse condition '{string}'")
 
     return f'{op} {a} {b}'
 
@@ -41,6 +38,8 @@ def options(param, *values):
 
 
 unitTypes = "any", "enemy", "ally", "boss", "player", "attacking", "flying", "ground"
+
+
 
 def read(var, memorycell, index):
     return f"read {memorycell} {index}"
@@ -147,6 +146,12 @@ def add(var, a, b):
 
 def sub(var, a, b):
     return f"op sub {var} {a} {b}"
+
+def increment(var):
+    return add(var, var, 1)
+
+def decrement(var):
+    return sub(var, var, 1)
 
 def mul(var, a, b):
     return f"op mul {var} {a} {b}"
@@ -438,6 +443,15 @@ payloadCount     = "@payloadCount"
 payloadType      = "@payloadType"
 enabled          = "@enabled"
 configure        = "@configure"
+
+message       = "@message"
+memoryCell    = "@memoryCell"
+processor     = "@processor"
+factory       = "@factory"
+reconstructor = "@reconstructor"
+turret        = "@turret"
+conveyor      = "@conveyor"
+router        = "@router"
 
 unit = '@unit'
 null = 'null'

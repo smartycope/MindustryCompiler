@@ -24,11 +24,15 @@ infile  = args.inputFile
 with open(infile, 'r') as f:
     inputProgram = f.read()
 
-keywords = ("while", "if", "else")
+keywords = ("while", "if", "else", "do")
 
 
-erEquals = group(word()) + ifNotPrecededBy('if') + optional(whitespace()) + match('=') + ifNotFollowedBy('=') + optional(whitespace()) + namedGroup('val', chunk())
-inputProgram = re.sub(erEquals.str(), 'set(' + replaceGroup('1').str() + ', ' + replaceNamedGroup('val').str() + ')', inputProgram)
+erEquals = group(word()) + ifNotPrecededBy('if') + optional(whitespace()) + match('=') + ifNotFollowedBy('=') + optional(whitespace()) + group(chunk())
+# debug(re.search(erEquals.str(), inputProgram).groups())
+inputProgram = re.sub(erEquals.str(), r'set(\g<1>, \g<4>)', inputProgram)
+
+# debug(inputProgram)
+# exit(0)
 
 # Replace and with _and
 inputProgram = re.sub(' and ', ' _and ', inputProgram)
@@ -61,13 +65,24 @@ for lineno, line in enumerate(program):
         continue
 
     if keyword == 'while':
-        erCondition = match('while') + optional(whiteChunk()) + '\(' + group(chunk()) + '\)' + optional(whiteChunk()) + '{'
+        erCondition = match('while') + optional(whitechunk()) + '\(' + group(chunk()) + '\)' + optional(whitechunk()) + '{'
         condition = re.search(erCondition.str(), line).groups()[1]
         if not condition:
             raise SyntaxError(f"Missing '{{' at the end of line {lineno + 1}")
         else:
             closing = searchForClosingBrace(lineno)
             program[lineno] = f"jump({closing}, 'true')"
+            program[closing + lineno] = f"jump({-(closing - 1)}, '{condition}')"
+
+    if keyword == 'dowhile':
+        # raise SyntaxError(f"Error: do statement at line {lineno + 1}. do statements are currently unimplemented.")
+        erCondition = match('while') + optional(whitechunk()) + '\(' + group(chunk()) + '\)' + optional(whitechunk()) + '{'
+        condition = re.search(erCondition.str(), line).groups()[1]
+        if not condition:
+            raise SyntaxError(f"Missing '{{' at the end of line {lineno + 1}")
+        else:
+            closing = searchForClosingBrace(lineno)
+            program[lineno] = ""
             program[closing + lineno] = f"jump({-(closing - 1)}, '{condition}')"
 
     if keyword == 'if':
@@ -103,7 +118,16 @@ for i in program:
             if foundName:
                 var = foundName.groups()[0]
                 varLine = f'{var} = "{var}"; '
-                exec(varLine + line, globals(), _locals)
+                try:
+                    exec(varLine + line, globals(), _locals)
+                except NameError as err2:
+                    erParseError = match("'") + group(word()) + match("'")
+                    foundName = re.search(erParseError.str(), str(err2))
+                    if foundName:
+                        var = foundName.groups()[0]
+                        varLine = f'{var} = "{var}"; '
+                    else:
+                        raise err2
             else:
                 raise err
     except Exception as err:
@@ -114,14 +138,13 @@ program = outputProgram.strip().splitlines()
 for lineno, line in enumerate(program):
     if 'jump' not in line:
         continue
-    erJump = group(optional(whiteChunk())) + 'jump ' + group(optional('-') + number())
+    erJump = optional(whitechunk()) + 'jump ' + group(optional('-') + number())
     found = re.search(erJump.str(), line)
     if found:
-        whitespace = found.groups()[0]
-        index      = found.groups()[2]
+        index = found.groups()[1]
     else:
         raise SyntaxError(f"Can't find a number in {line}")
-    program[lineno] = re.subn(erJump.str(), f'{whitespace}jump {int(index) + lineno}', line, 1)[0]
+    program[lineno] = re.subn(erJump.str(), f'jump {int(index) + lineno}', line, 1)[0]
 
 
 out = '\n'.join(program)

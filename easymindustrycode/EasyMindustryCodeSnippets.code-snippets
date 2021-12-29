@@ -547,4 +547,446 @@
         "body": [ "ulocatedamaged(${1:xvar}, ${2:yvar}, ${3:foundVar}, ${4:buildingVar})" ],
         "description": "Locate a damaged ally building with the currently bound unit. Stores into xvar, yvar, and foundvar.",
     },
+    "increment": {
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "increment",
+        "body": [ "increment(${1:var})" ],
+        "description": "Increment a variable by 1",
+    },
+    "decrement": {
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "decrement",
+        "body": [ "decrement(${1:var})" ],
+        "description": "Decrement a variable by 1",
+    },
+
+
+
+
+
+    "mono":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "mono",
+        "body": [ "mono" ],
+    },
+    "poly":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "poly",
+        "body": [ "poly" ],
+    },
+    "mega":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "mega",
+        "body": [ "mega" ],
+    },
+    "risso":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "risso",
+        "body": [ "risso" ],
+    },
+    "minke":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "minke",
+        "body": [ "minke" ],
+    },
+    "bryde":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "bryde",
+        "body": [ "bryde" ],
+    },
+    "alpha":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "alpha",
+        "body": [ "alpha" ],
+    },
+    "beta":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "beta",
+        "body": [ "beta" ],
+    },
+    "gamma":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "gamma",
+        "body": [ "gamma" ],
+    },
+    "flare":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "flare",
+        "body": [ "flare" ],
+    },
+    "horizon":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "horizon",
+        "body": [ "horizon" ],
+    },
+    "zenith":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "zenith",
+        "body": [ "zenith" ],
+    },
+    "dagger":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "dagger",
+        "body": [ "dagger" ],
+    },
+    "mace":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "mace",
+        "body": [ "mace" ],
+    },
+    "fortress":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "fortress",
+        "body": [ "fortress" ],
+    },
+    "nova":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "nova",
+        "body": [ "nova" ],
+    },
+    "pulsar":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "pulsar",
+        "body": [ "pulsar" ],
+    },
+    "quasar":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "quasar",
+        "body": [ "quasar" ],
+    },
+    "crawler":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "crawler",
+        "body": [ "crawler" ],
+    },
+    "atrax":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "atrax",
+        "body": [ "atrax" ],
+    },
+    "spiroct":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "spiroct",
+        "body": [ "spiroct" ],
+    },
+    "copper":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "copper",
+        "body": [ "copper" ],
+    },
+    "lead":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "lead",
+        "body": [ "lead" ],
+    },
+    "thorium":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "thorium",
+        "body": [ "thorium" ],
+    },
+    "titanium":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "titanium",
+        "body": [ "titanium" ],
+    },
+    "metaglass":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "metaglass",
+        "body": [ "metaglass" ],
+    },
+    "sand":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "sand",
+        "body": [ "sand" ],
+    },
+    "graphite":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "graphite",
+        "body": [ "graphite" ],
+    },
+    "coal":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "coal",
+        "body": [ "coal" ],
+    },
+    "scrap":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "scrap",
+        "body": [ "scrap" ],
+    },
+    "silicon":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "silicon",
+        "body": [ "silicon" ],
+    },
+    "plastanium":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "plastanium",
+        "body": [ "plastanium" ],
+    },
+    "phaseFabric":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "phaseFabric",
+        "body": [ "phaseFabric" ],
+    },
+    "surgeAlloy":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "surgeAlloy",
+        "body": [ "surgeAlloy" ],
+    },
+    "sporePod":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "sporePod",
+        "body": [ "sporePod" ],
+    },
+    "blastCompound":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "blastCompound",
+        "body": [ "blastCompound" ],
+    },
+    "pyratite":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "pyratite",
+        "body": [ "pyratite" ],
+    },
+    "water":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "water",
+        "body": [ "water" ],
+    },
+    "slag":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "slag",
+        "body": [ "slag" ],
+    },
+    "oil":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "oil",
+        "body": [ "oil" ],
+    },
+    "cryofluid":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "cryofluid",
+        "body": [ "cryofluid" ],
+    },
+    "totalItems":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "totalItems",
+        "body": [ "totalItems" ],
+    },
+    "firstItem":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "firstItem",
+        "body": [ "firstItem" ],
+    },
+    "totalLiquids":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "totalLiquids",
+        "body": [ "totalLiquids" ],
+    },
+    "totalPower":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "totalPower",
+        "body": [ "totalPower" ],
+    },
+    "itemCapacity":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "itemCapacity",
+        "body": [ "itemCapacity" ],
+    },
+    "liquidCapacity":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "liquidCapacity",
+        "body": [ "liquidCapacity" ],
+    },
+    "powerCapacity":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "powerCapacity",
+        "body": [ "powerCapacity" ],
+    },
+    "powerNetStored":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "powerNetStored",
+        "body": [ "powerNetStored" ],
+    },
+    "powerNetCapacity":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "powerNetCapacity",
+        "body": [ "powerNetCapacity" ],
+    },
+    "powerNetIn":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "powerNetIn",
+        "body": [ "powerNetIn" ],
+    },
+    "powerNetOut":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "powerNetOut",
+        "body": [ "powerNetOut" ],
+    },
+    "ammo":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "ammo",
+        "body": [ "ammo" ],
+    },
+    "ammoCapacity":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "ammoCapacity",
+        "body": [ "ammoCapacity" ],
+    },
+    "health":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "health",
+        "body": [ "health" ],
+    },
+    "maxHealth":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "maxHealth",
+        "body": [ "maxHealth" ],
+    },
+    "heat":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "heat",
+        "body": [ "heat" ],
+    },
+    "efficiency":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "efficiency",
+        "body": [ "efficiency" ],
+    },
+    "timescale":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "timescale",
+        "body": [ "timescale" ],
+    },
+    "rotation":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "rotation",
+        "body": [ "rotation" ],
+    },
+    "x":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "x",
+        "body": [ "x" ],
+    },
+    "y":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "y",
+        "body": [ "y" ],
+    },
+    "shootX":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "shootX",
+        "body": [ "shootX" ],
+    },
+    "shootY":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "shootY",
+        "body": [ "shootY" ],
+    },
+    "size":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "size",
+        "body": [ "size" ],
+    },
+    "dead":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "dead",
+        "body": [ "dead" ],
+    },
+    "range":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "range",
+        "body": [ "range" ],
+    },
+    "shooting":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "shooting",
+        "body": [ "shooting" ],
+    },
+    "boosting":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "boosting",
+        "body": [ "boosting" ],
+    },
+    "mineX":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "mineX",
+        "body": [ "mineX" ],
+    },
+    "mineY":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "mineY",
+        "body": [ "mineY" ],
+    },
+    "mining":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "mining",
+        "body": [ "mining" ],
+    },
+    "team":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "team",
+        "body": [ "team" ],
+    },
+    "type":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "type",
+        "body": [ "type" ],
+    },
+    "flag":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "flag",
+        "body": [ "flag" ],
+    },
+    "controlled":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "controlled",
+        "body": [ "controlled" ],
+    },
+    "controller":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "controller",
+        "body": [ "controller" ],
+    },
+    "name":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "name",
+        "body": [ "name" ],
+    },
+    "config":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "config",
+        "body": [ "config" ],
+    },
+    "payloadCount":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "payloadCount",
+        "body": [ "payloadCount" ],
+    },
+    "payloadType":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "payloadType",
+        "body": [ "payloadType" ],
+    },
+    "enabled":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "enabled",
+        "body": [ "enabled" ],
+    },
+    "configure":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "configure",
+        "body": [ "configure" ],
+    },
+    "unit":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "unit",
+        "body": [ "unit" ],
+    },
+    "null":{
+        "scope": "emc, easymindustrycode, mindustry.code",
+        "prefix": "null",
+        "body": [ "null" ],
+    },
 }

@@ -1,18 +1,21 @@
-var = 8
+# ore = copper
+# stopAt = 20
 
-if (var < 8){
-    add()
-    and
-    draw
+# getNormalLink()
+# print(building)
+# printflush()
 
+# set('linkCounter', 0)
+# getlink(var, 'linkCounter')
+# sensor('buildingType', var, '@type')
+# jump(-3, f"buildingType == @{type}")
+
+
+linkCounter = 0
+dowhile(buildingType == type){
+    getlink(building, linkCounter)
+    sensor(buildingType, building, type)
+    increment(linkCounter)
 }
-while
-add
-draw
-bradar
-ubind
-read
-sensor
-mono
-jump
-nothing()
+sensor(count, building, totalItems)
+printf(count)
